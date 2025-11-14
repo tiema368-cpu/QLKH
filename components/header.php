@@ -2,7 +2,7 @@
     <div class="header-content">
         <div class="logo-section">
             <div class="logo-icon">
-                <img src="images/logo Trường đh tt.png" alt="Logo Trường Đại học Tân Trào">
+                <img src="images/logo-truong-dh-tan-trao.png" alt="Logo Trường Đại học Tân Trào">
             </div>
             <div class="logo-text">
                 <h1>UBND TỈNH TUYÊN QUANG</h1>
