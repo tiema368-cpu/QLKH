@@ -6,6 +6,9 @@ FROM php:8.2-apache
 # Enable commonly used Apache modules (rewrite for pretty URLs if needed)
 RUN a2enmod rewrite headers expires
 
+# Install mysql-client to run migrations
+RUN apt-get update && apt-get install -y default-mysql-client && rm -rf /var/lib/apt/lists/*
+
 # Copy project files to the web root
 # If you later add composer or build steps, consider a multi-stage build
 COPY . /var/www/html/
