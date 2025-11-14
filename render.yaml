@@ -1,0 +1,29 @@
+# render.yaml
+services:
+  - type: web
+    name: webne-infinity
+    env: docker
+    dockerfilePath: ./Dockerfile
+    envVars:
+      - key: DB_HOST
+        fromDatabase:
+          name: db
+          property: host
+      - key: DB_NAME
+        fromDatabase:
+          name: db
+          property: database
+      - key: DB_USER
+        fromDatabase:
+          name: db
+          property: user
+      - key: DB_PASS
+        fromDatabase:
+          name: db
+          property: password
+  - type: pserv
+    name: db
+    env: postgres # or mysql, or mariadb
+    disk:
+      name: postgres-data
+      sizeGB: 1

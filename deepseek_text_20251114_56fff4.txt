@@ -1,0 +1,17 @@
+project/
+├── index.php
+├── config.php
+├── database.sql
+├── css/
+│   └── style.css
+├── js/
+│   └── script.js
+└── components/
+    ├── header.php
+    ├── forms/
+    │   ├── research_form.php
+    │   ├── paper_form.php
+    │   ├── book_form.php
+    │   ├── guidance_form.php
+    │   └── award_form.php
+    └── data_viewer.php

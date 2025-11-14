@@ -1,0 +1,17 @@
+version: "3.9"
+services:
+  web:
+    build: .
+    image: webne_infinity:latest
+    container_name: webne_infinity
+    ports:
+      - "8081:80"
+    volumes:
+      # Mount current directory for rapid local iteration; comment out for production
+      - ./:/var/www/html
+    environment:
+      # Add any needed env vars here
+      # APP_ENV: production
+      # APP_DEBUG: "0"
+      TZ: Asia/Ho_Chi_Minh
+    restart: unless-stopped
