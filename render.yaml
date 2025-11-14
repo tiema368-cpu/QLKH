@@ -21,7 +21,7 @@ services:
         fromDatabase:
           name: db
           property: password
-  initialDeployHook: mysql -h $DB_HOST -u $DB_USER -p$DB_PASS $DB_NAME < database.sql
+    initialDeployHook: "mysql -h $DB_HOST -u $DB_USER -p$DB_PASS $DB_NAME < database.sql"
   - type: pserv
     name: db
     env: mysql
