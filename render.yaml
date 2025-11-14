@@ -21,9 +21,10 @@ services:
         fromDatabase:
           name: db
           property: password
+  initialDeployHook: mysql -h $DB_HOST -u $DB_USER -p$DB_PASS $DB_NAME < database.sql
   - type: pserv
     name: db
-    env: postgres # or mysql, or mariadb
+    env: mysql
     disk:
-      name: postgres-data
+      name: mysql-data
       sizeGB: 1
